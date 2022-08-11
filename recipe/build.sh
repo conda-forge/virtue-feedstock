@@ -1,7 +1,7 @@
 #!/bin/bash
 # Add SKILL library
 mkdir -p "${PREFIX}/lib/skill/virtue"
-cp -rf "${RECIPE_DIR}/../virtue" \
+cp -rf "virtue" \
        "${PREFIX}/lib/skill/"
 # Not included in the sdist
 #for item in "README.md" "pyproject.toml"; do
