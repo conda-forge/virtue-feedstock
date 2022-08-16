@@ -19,13 +19,17 @@ requirements:
     - flit >=3.7.1
     - python >=3.7
   run:
-    - python >=3.7
+    - python >=3.7,<4
+    - typer >=0.6.1,<1
+    - rich >=12.5.1,<13
+    - pluggy >=1.0.0,<2
 
 test:
   imports:
     - virtue
   commands:
     - pip check
+    - virtue --version
   requires:
     - pip
 
