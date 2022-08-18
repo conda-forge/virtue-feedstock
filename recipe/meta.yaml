@@ -1,5 +1,5 @@
 {% set name = "virtue" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}-skill/virtue-skill-{{ version }}.tar.gz
-  sha256: a17ba6a78925763fda53e4cff87d53f1b2b40f641e62f1945b6f837920d0f2f3
+  sha256: 24adae798a00d06c0a36364536a63a3ebd417830699663df05459e0e5f282828
 
 build:
   number: 0
