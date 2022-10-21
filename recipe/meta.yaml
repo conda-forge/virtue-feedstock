@@ -1,5 +1,5 @@
 {% set name = "virtue" %}
-{% set version = "0.3.2" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}-skill/virtue-skill-{{ version }}.tar.gz
-  sha256: 24adae798a00d06c0a36364536a63a3ebd417830699663df05459e0e5f282828
+  sha256: 2056bffe00118d39b100ab68d5bf8a3a31a3970308783dc6f11d95e7f5c39066
 
 build:
   number: 0
@@ -17,12 +17,13 @@ requirements:
   host:
     - pip >=22.2.2
     - flit >=3.7.1
-    - python >=3.7
+    - python >=3.8
   run:
     - python >=3.7,<4
     - typer >=0.6.1,<1
     - rich >=12.5.1,<13
     - pluggy >=1.0.0,<2
+    - toml >=0.10,<1
 
 test:
   imports:
@@ -34,10 +35,10 @@ test:
     - pip
 
 about:
-  home: http://www.cascode-labs.org/virtue/
+  home: https://www.cascode-labs.org/virtue/
   summary: Cadence Virtuoso SKILL++ framework
   dev_url: https://github.com/cascode-labs/virtue
-  doc_url: http://www.cascode-labs.org/virtue/
+  doc_url: https://www.cascode-labs.org/virtue/
   doc_source_url: https://github.com/cascode-labs/virtue/tree/main/docs/source
   license: MIT
   license_file:
