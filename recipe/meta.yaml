@@ -23,6 +23,7 @@ requirements:
     - typer >=0.6.1,<1
     - rich >=12.5.1,<13
     - pluggy >=1.0.0,<2
+    - toml >=0.10,<1
 
 test:
   imports:
