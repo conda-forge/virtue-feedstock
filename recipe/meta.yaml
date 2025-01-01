@@ -6,20 +6,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}-skill/virtue-skill-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}-skill/virtue-skill-{{ version }}.tar.gz
   sha256: 2056bffe00118d39b100ab68d5bf8a3a31a3970308783dc6f11d95e7f5c39066
 
 build:
-  number: 0
+  number: 1
   noarch: python
 
 requirements:
   host:
     - pip >=22.2.2
     - flit >=3.7.1
-    - python >=3.8
+    - python {{ python_min }}
   run:
-    - python >=3.7,<4
+    - python >={{ python_min }},<4
     - typer >=0.6.1,<1
     - rich >=12.5.1,<13
     - pluggy >=1.0.0,<2
@@ -33,6 +33,7 @@ test:
     - virtue --version
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://www.cascode-labs.org/virtue/
